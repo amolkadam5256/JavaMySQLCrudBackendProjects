@@ -1,4 +1,3 @@
-// Source code is decompiled from a .class file using FernFlower decompiler.
 package DAO;
 
 import DB.DBConnection;
@@ -13,7 +12,7 @@ public class UserDAO {
    public static boolean validateLogin(String username, String password, String role) {
       try {
          Connection conn = DBConnection.getConnection();
-         String sql = "SELECT * FROM users WHERE username = ? AND password = ? AND role = ?";
+         String sql = "SELECT * FROM employees WHERE username = ? AND password = ? AND role = ?";
          PreparedStatement ps = conn.prepareStatement(sql);
          ps.setString(1, username);
          ps.setString(2, password);
